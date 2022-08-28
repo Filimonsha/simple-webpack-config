@@ -1,5 +1,6 @@
 import path from "path";
+import './styles/main.scss'
 
-let a: number;
+
 console.log(path.resolve(__dirname, "../index.html"))
 const b = 122222222222;
