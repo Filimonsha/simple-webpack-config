@@ -1,0 +1,20 @@
+.table {
+  padding: 20px;
+  width: 100%;
+  &_graph-svg {
+    border: 1px solid #000;
+    box-sizing: border-box;
+  }
+
+  &_graph-shape {
+    fill: dodgerblue;
+    fill-opacity: 85%;
+  }
+
+  &_graph-axle-line {
+    stroke: black;
+  }
+  &_graph-point{
+    stroke:black;
+  }
+}

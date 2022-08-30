@@ -1,6 +1,10 @@
-import path from "path";
+import './styles/graph.scss'
+import './styles/scripts-info.scss'
 import './styles/main.scss'
+import loadSelectElements from "./scripts/userInteractios";
+// import {loadSelectElements} from "./scripts/userInteractios.ts";
 
 
-console.log(path.resolve(__dirname, "../index.html"))
-const b = 122222222222;
+document.addEventListener("DOMContentLoaded",()=>{
+    loadSelectElements()
+})

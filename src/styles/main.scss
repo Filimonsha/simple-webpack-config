@@ -1,23 +1,13 @@
-.table {
-  padding: 20px;
-  width: 100%;
+body{
+  background:#badabf;
+  font-family: 'Play', sans-serif;
 
-  &_graph{
-  }
-  &_graph-svg {
-    border: 1px solid #000;
-    box-sizing: border-box;
-  }
-
-  &_graph-shape {
-    fill: dodgerblue;
-    fill-opacity: 85%;
-  }
-
-  &_graph-axle-line {
-    stroke: black;
-  }
-  &_graph-point{
-    stroke:black;
+  .header{
+    background: #7bb38d;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    border: 1px solid black;
   }
 }
+

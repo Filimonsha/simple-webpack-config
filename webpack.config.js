@@ -1,12 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer')
-const loader = require("ts-loader");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 module.exports = {
     mode: NODE_ENV,
+    resolve: {
+        extensions: ['.js','.ts']
+    },
+    optimization: {
+        minimizer: [new UglifyJsPlugin()]
+    },
     entry: {
         main: path.resolve(__dirname, './src/index.ts')
     },
@@ -35,7 +40,6 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-
                             sourceMap: true
                         }
                     },
