@@ -1,0 +1,4 @@
+.table{padding:20px;width:100%}.table_graph-svg{border:1px solid #000;box-sizing:border-box}.table_graph-shape{fill:#1e90ff;fill-opacity:85%}.table_graph-axle-line{stroke:#000}.table_graph-point{stroke:#000}
+.scripts-info{width:100%}.scripts-info_header{background:#faebd7}
+body{background:#badabf;font-family:"Play",sans-serif}body .header{background:#7bb38d;display:flex;justify-content:space-around;padding:30px;border:1px solid #000}
+.row{padding-left:50px}.form{border:1px solid #000;padding:20px;border-radius:20px;background:#e3f1e2;margin-bottom:30px}.form h4{margin:0px 0px 25px}.form_checkbox-select,.form_radio-select{margin-bottom:20px}.form_input-text[type=number]{border:1px solid #73816a;padding:5px 10px;border-radius:8px;margin-bottom:20px}.form_input-text[type=number]:focus-visible{outline:1px solid #378752}.form_btn{border:1px solid #73816a;border-radius:20px;padding:5px 10px;min-width:200px;background:#7bb38d;margin-top:20px}
