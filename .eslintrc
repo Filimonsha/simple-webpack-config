@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "eslint-plugin-prettier",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "func-call-spacing": "error"
+  }
+}

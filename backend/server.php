@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     print_r(parse_url($_SERVER['REQUEST_URI'], PHP_URL_SCHEME));
     $path =  parse_url($_SERVER['REQUEST_URI'])['path'];
     if($path == '/api/hit'){
-        echo 'hi';
         $script_start = microtime(true);
         if (isset($_GET['r']) && isset($_GET['x']) && isset($_GET['y'])) {
             header('Content-Type: text/html');
@@ -22,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $currentTime = gmDate("H:i:s",time() + 3600*(3+date("I")));
                 $execution_time = ceil((microtime(true) - $script_start) * 100000000) /100;
                 echo "
-                <tr style='text-align: center;'>
+                <tr style='text-align: center;outline:1px solid black;'>
                     <td>$xValue</td>
                     <td>$yValue</td>
                     <td>$rValue</td>
@@ -39,26 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 function hit($x, $y, $r){
-    if ($x >= 0 &&
-        $y >= 0 &&
-        $x <= $r &&
-        $y <= $r) {
-        return true;
-    }
-    elseif ($x < 0 && $y < 0) {
-        return false;
-    }
-    elseif ($x >= 0 && $y <= 0) {
-        if (-$y <= ($r/2 - $x)) {
-            return true;
-        }
-        return false;
-    }
-    elseif($x <= 0 && $y >= 0) {
-        if (($x**2 + $y**2) <= $r**2){
-            return true;
-        }
-        return false;
-    }
+  if($x >= 0 && $y <= (-$x/2 +$r))
+    return true;
+
+  elseif($x >= 0 && $y <= 0 && $x <= ($r/2) && $y >= -$r)
+    return true;
+
+  elseif($x <= 0 && $y <= 0 && ($y**2 + $x**2) <= $r**2)
+    return true;
+
+  else return false;
 }
 ?>

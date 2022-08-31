@@ -1,10 +1,8 @@
-import './styles/graph.scss'
-import './styles/scripts-info.scss'
-import './styles/main.scss'
-import loadSelectElements from "./scripts/userInteractios";
-// import {loadSelectElements} from "./scripts/userInteractios.ts";
+import './styles/graph.scss';
+import './styles/scripts-info.scss';
+import './styles/main.scss';
+import startApplication from './scripts/userInteractios';
 
-
-document.addEventListener("DOMContentLoaded",()=>{
-    loadSelectElements()
-})
+document.addEventListener('DOMContentLoaded', () => {
+  startApplication();
+});
