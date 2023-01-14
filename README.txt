@@ -1,4 +1,11 @@
-Настройка сборки проекта через конфигурацию webpack config.
+## a simple project built on webpack with a test backend in php and a client in typescript
 
-npm run dev - запуск дев сервера
-npm run build - сборка проекта
+
+### dev server start command
+```bash
+npm run dev 
+```
+### project building command
+```bash
+npm run build
+```
